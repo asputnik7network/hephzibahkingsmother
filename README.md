@@ -1,0 +1,20 @@
+# procurement-responses
+Business Services, Fingerprints of God (Service Provider. Advocating. AI Coaching and Consulting)
+/docs   (or /root)
+│
+├── index.md                (Home)
+├── services.md             (Services)
+├── compliance.md           (Compliance & Credentials)
+├── who-we-serve.md         (Who We Serve)
+├── request-services.md     (Request Services)
+│
+├── /assets
+│   ├── /pdf
+│   │   ├── capability-statement.pdf
+│   │   ├── compliance-summary.pdf
+│   │   └── pricing-narrative.pdf
+│   └── /css
+│       └── styles.css
+│
+├── _config.yml             (if using Jekyll)
+└── README.md
