@@ -136,8 +136,9 @@ def build_checklist(path):
 one_pager_path = "assets/pdf/Government-Ready_Screening-Service-Summary_One-Pager.pdf"
 checklist_path = "assets/pdf/Compliance-Readiness-Checklist_Printable.pdf"
 
-# Ensure the output directory exists
+# Ensure the output directories exist
 os.makedirs(os.path.dirname(one_pager_path), exist_ok=True)
+os.makedirs(os.path.dirname(checklist_path), exist_ok=True)
 
 build_one_pager(one_pager_path)
 build_checklist(checklist_path)
