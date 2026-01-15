@@ -14,8 +14,9 @@ We take security seriously and appreciate your efforts to responsibly disclose a
 
 To report a security vulnerability:
 
-1. **Email**: Send details to asputnik7network@gmail.com with "SECURITY" in the subject line
-2. **GitHub Issues**: For non-sensitive issues, you may open a GitHub issue at https://github.com/asputnik7network/hephzibahkingsmother/issues
+1. **Email** (Preferred): Send details to asputnik7network@gmail.com with "SECURITY" in the subject line
+   - Use this method for all security vulnerabilities to ensure private disclosure
+2. **GitHub Issues**: Only for general security questions or documentation improvements (not for reporting vulnerabilities)
 
 Please include:
 - Description of the vulnerability
