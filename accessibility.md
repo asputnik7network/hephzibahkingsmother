@@ -26,7 +26,12 @@ Known limitations and solutions
 
 Feedback and contact information
 
-If you encounter accessibility barriers while using this project, please open an issue at https://github.com/asputnik7network/hephzibahkingsmother/issues with the tag "accessibility" or contact us at the repository's issue tracker. Please include:
+If you encounter accessibility barriers while using this project, please contact us:
+
+- Email: asputnik7network@gmail.com
+- GitHub Issues: https://github.com/asputnik7network/hephzibahkingsmother/issues with the tag "accessibility"
+
+Please include:
 
 - The web address (URL) where you encountered the issue
 - A description of the problem
@@ -49,7 +54,7 @@ Compatibility
 
 Reporting
 
-- To report an accessibility issue, please open a GitHub issue at https://github.com/asputnik7network/hephzibahkingsmother/issues and include the details described above.
+- To report an accessibility issue, please email us at asputnik7network@gmail.com or open a GitHub issue at https://github.com/asputnik7network/hephzibahkingsmother/issues and include the details described above.
 
 Acknowledgements
 
