@@ -312,3 +312,20 @@ nav a:hover {
   margin: 0.3rem 0;
   font-size: 0.9rem;
 }
+
+.footer-links {
+  margin-top: 1rem;
+  font-size: 0.85rem;
+}
+
+.footer-links a {
+  color: var(--text-light);
+  text-decoration: none;
+  transition: color 0.3s ease;
+  padding: 0 0.3rem;
+}
+
+.footer-links a:hover {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
