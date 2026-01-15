@@ -165,10 +165,10 @@ To report privacy concerns or data handling issues:
 
 ## Additional Resources
 
-- [Privacy Policy](privacy-policy.md)
-- [Terms of Service](terms-of-service.md)
-- [Accessibility Statement](accessibility.md)
-- [Compliance Center](compliance.md)
+- [Privacy Policy](privacy-policy.html)
+- [Terms of Service](terms-of-service.html)
+- [Accessibility Statement](accessibility.html)
+- [Compliance Center](compliance.html)
 
 ---
 

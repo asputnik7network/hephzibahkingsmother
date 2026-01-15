@@ -88,7 +88,7 @@ We strive to meet:
 - Section 508 of the Rehabilitation Act
 - Americans with Disabilities Act (ADA) web accessibility requirements
 
-See our [Accessibility Statement](accessibility.md) for details.
+See our [Accessibility Statement](accessibility.html) for details.
 
 ### Equal Opportunity
 We provide services without discrimination based on:
@@ -150,7 +150,7 @@ We have procedures for:
 ## Compliance Policies and Procedures
 
 ### Key Policies
-- Privacy Policy (see [Privacy Policy](privacy-policy.md))
+- Privacy Policy (see [Privacy Policy](privacy-policy.html))
 - Data Security Policy
 - Employee Conduct and Ethics Policy
 - Incident Response and Breach Notification Policy
@@ -218,10 +218,10 @@ All reports are taken seriously and investigated promptly. We do not retaliate a
 ## Supporting Documents
 
 For additional information, see:
-- [Privacy Policy](privacy-policy.md)
-- [Terms of Service](terms-of-service.md)
-- [Accessibility Statement](accessibility.md)
-- [Fingerprinting & Data Handling](fingerprinting-data-disclosure.md)
+- [Privacy Policy](privacy-policy.html)
+- [Terms of Service](terms-of-service.html)
+- [Accessibility Statement](accessibility.html)
+- [Fingerprinting & Data Handling](fingerprinting-data-disclosure.html)
 
 You may also download:
 - [Compliance Readiness Checklist (PDF)](Compliance-Readiness-Checklist_Printable.pdf)
