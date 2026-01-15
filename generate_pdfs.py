@@ -6,6 +6,7 @@ from reportlab.platypus import Paragraph, SimpleDocTemplate, Spacer, Table, Tabl
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 from reportlab.lib.enums import TA_LEFT, TA_CENTER
 from datetime import date
+import os
 
 styles = getSampleStyleSheet()
 title_style = ParagraphStyle('title', parent=styles['Title'], alignment=TA_CENTER, fontSize=18, spaceAfter=12)
@@ -134,6 +135,9 @@ def build_checklist(path):
 
 one_pager_path = "assets/pdf/Government-Ready_Screening-Service-Summary_One-Pager.pdf"
 checklist_path = "assets/pdf/Compliance-Readiness-Checklist_Printable.pdf"
+
+# Ensure the output directory exists
+os.makedirs(os.path.dirname(one_pager_path), exist_ok=True)
 
 build_one_pager(one_pager_path)
 build_checklist(checklist_path)
