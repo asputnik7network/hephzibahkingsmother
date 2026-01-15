@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.title }}</title>
+  {% if page.description %}
+  <meta name="description" content="{{ page.description }}">
+  {% else %}
+  <meta name="description" content="{{ site.description }}">
+  {% endif %}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-mPlctQz2NvCpYzxnvVgFmWYxwKdU4LphmIQXha1SVkZOGp3NePh2L8uzOLNJKX/mG1THB1S4YfKfIW5B1rM3bA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
+</head>
+<body>
+  <!-- Header & Navigation -->
+  <header class="header">
+    <div class="container nav-container">
+      <a href="{{ '/' | relative_url }}" class="logo">Hephzibah King's Mother</a>
+      <nav>
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="menu-icon"><i class="fas fa-bars"></i></label>
+        <ul class="nav-links">
+          <li><a href="{{ '/#services' | relative_url }}">Services</a></li>
+          <li><a href="{{ '/#advocacy' | relative_url }}">Advocacy</a></li>
+          <li><a href="{{ '/#coaching' | relative_url }}">Coaching</a></li>
+          <li><a href="{{ '/#consulting' | relative_url }}">Consulting</a></li>
+          <li><a href="{{ '/#fingerprinting' | relative_url }}">Fingerprinting</a></li>
+          <li><a href="{{ '/#contact' | relative_url }}">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page Content -->
+  <main class="page-content">
+    <div class="container">
+      {{ content }}
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>&copy; 2026 Hephzibah King's Mother. All rights reserved.</p>
+      <p>Serving communities with excellence and integrity.</p>
+    </div>
+  </footer>
+</body>
+</html>
