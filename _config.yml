@@ -1,0 +1,14 @@
+# Jekyll configuration for Hephzibah King's Mother website
+
+# Site settings
+title: "Hephzibah King's Mother"
+description: "Professional business services, advocacy, coaching, consulting and fingerprint data collection for Florida Level 2 background screening."
+baseurl: ""
+url: ""
+
+# Build settings
+markdown: kramdown
+exclude:
+  - README.md
+  - .git
+  - .github
