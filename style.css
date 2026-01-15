@@ -312,3 +312,14 @@ nav a:hover {
   margin: 0.3rem 0;
   font-size: 0.9rem;
 }
+
+.footer-links a {
+  color: var(--text-light);
+  text-decoration: none;
+  transition: opacity 0.3s;
+}
+
+.footer-links a:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
