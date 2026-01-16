@@ -2,20 +2,33 @@
 
 ## Supported Versions
 
-Use this section to tell people about which versions of your project are
-currently being supported with security updates.
+This project is actively maintained. Security updates are provided for the current version.
 
 | Version | Supported          |
 | ------- | ------------------ |
-| 5.1.x   | :white_check_mark: |
-| 5.0.x   | :x:                |
-| 4.0.x   | :white_check_mark: |
-| < 4.0   | :x:                |
+| Latest  | :white_check_mark: |
 
 ## Reporting a Vulnerability
 
-Use this section to tell people how to report a vulnerability.
+We take security seriously and appreciate your efforts to responsibly disclose any vulnerabilities.
 
-Tell them where to go, how often they can expect to get an update on a
-reported vulnerability, what to expect if the vulnerability is accepted or
-declined, etc.
+To report a security vulnerability:
+
+1. **Email** (Preferred): Send details to asputnik7network@gmail.com with "SECURITY" in the subject line
+   - Use this method for all security vulnerabilities to ensure private disclosure
+2. **GitHub Issues**: Only for general security questions or documentation improvements (not for reporting vulnerabilities)
+
+Please include:
+- Description of the vulnerability
+- Steps to reproduce the issue
+- Potential impact
+- Any suggested fixes (if applicable)
+
+### What to Expect
+
+- **Initial Response**: We aim to acknowledge receipt within 48 hours
+- **Updates**: You will receive updates on the status of your report as we investigate
+- **Resolution**: If the vulnerability is accepted, we will work on a fix and keep you informed of the timeline
+- **Credit**: We appreciate responsible disclosure and will credit you for your findings (unless you prefer to remain anonymous)
+
+Thank you for helping us maintain the security of this project.
