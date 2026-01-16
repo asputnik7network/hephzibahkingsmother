@@ -6,7 +6,7 @@ on:
     - cron: "0 14 * * 1" # Mondays 10:00 AM ET (14:00 UTC)
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   check:
@@ -15,37 +15,80 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: Verify core site files
+      - name: Generate readiness report
         shell: bash
         run: |
           set -u
-          echo "Running readiness checks..."
+          mkdir -p reports/readiness
 
-          # Files expected at repo root (adjust only if you intentionally renamed them)
-          files=(
-            "index.html"
-            "README.md"
-            "SECURITY.md"
-            "accessibility.md"
-          )
+          REPORT="reports/readiness/latest.md"
+          NOW="$(date -u '+%Y-%m-%d %H:%M UTC')"
 
+          {
+            echo "# Readiness Report"
+            echo ""
+            echo "- Generated: ${NOW}"
+            echo "- Repo: ${GITHUB_REPOSITORY}"
+            echo "- Branch: ${GITHUB_REF_NAME}"
+            echo ""
+            echo "## Core file checks"
+            echo ""
+          } > "$REPORT"
+
+          files=("index.html" "README.md" "SECURITY.md" "accessibility.md")
           for f in "${files[@]}"; do
-            if [[ ! -f "$f" ]]; then
-              echo "::warning title=Missing file::$f"
+            if [[ -f "$f" ]]; then
+              echo "- ✅ $f" >> "$REPORT"
             else
-              echo "OK: $f"
+              echo "- ⚠️ Missing: $f" >> "$REPORT"
             fi
           done
 
-          # Folders you may or may not have yet (warnings only)
-          dirs=("text" "dashboard" "reports" "series")
+          {
+            echo ""
+            echo "## Core path checks"
+            echo ""
+          } >> "$REPORT"
+
+          dirs=("text" "dashboard" "reports" "series" "accessibility-ministry")
           for d in "${dirs[@]}"; do
-            if [[ ! -e "$d" ]]; then
-              echo "::warning title=Missing path::$d"
+            if [[ -e "$d" ]]; then
+              echo "- ✅ $d" >> "$REPORT"
             else
-              echo "OK: $d"
+              echo "- ⚠️ Missing: $d" >> "$REPORT"
             fi
           done
 
-          echo "Readiness check completed."
+          echo "" >> "$REPORT"
+          echo "## Notes" >> "$REPORT"
+          echo "" >> "$REPORT"
+          echo "- If any items are missing, restore them before major updates or releases." >> "$REPORT"
 
+          echo "Report created at $REPORT"
+          echo "REPORT_PATH=$REPORT" >> $GITHUB_ENV
+
+      # A) Backup: upload as artifact (safest)
+      - name: Upload readiness report (artifact)
+        uses: actions/upload-artifact@v4
+        with:
+          name: readiness-report
+          path: ${{ env.REPORT_PATH }}
+
+      # B) Convenience: publish to repo (best usability)
+      # If branch protections block direct commits, artifact still exists.
+      - name: Publish readiness report to repo
+        shell: bash
+        run: |
+          git config user.name "jtj-readiness-bot"
+          git config user.email "actions@users.noreply.github.com"
+
+          git add reports/readiness/latest.md
+
+          # Only commit if there are changes
+          if git diff --cached --quiet; then
+            echo "No changes to publish."
+            exit 0
+          fi
+
+          git commit -m "Update readiness report"
+          git push
