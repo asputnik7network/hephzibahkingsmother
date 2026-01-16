@@ -312,3 +312,12 @@ nav a:hover {
   margin: 0.3rem 0;
   font-size: 0.9rem;
 }
+
+.footer a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.footer a:hover {
+  opacity: 0.8;
+}
