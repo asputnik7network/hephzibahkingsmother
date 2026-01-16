@@ -312,3 +312,15 @@ nav a:hover {
   margin: 0.3rem 0;
   font-size: 0.9rem;
 }
+
+/* Compliance section styling */
+.detail-section h3 {
+  margin-top: 2rem;
+  color: var(--primary-color);
+  font-size: 1.4rem;
+}
+
+.detail-section ul {
+  margin-left: 2rem;
+  margin-top: 1rem;
+}
