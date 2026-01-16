@@ -1,3 +1,10 @@
+---
+layout: page
+title: Accessibility Statement
+description: Accessibility Statement for Hephzibah King's Mother
+permalink: /accessibility/
+---
+
 # Accessibility Statement
 
 We are committed to ensuring digital accessibility for people with disabilities. We are continually improving the user experience for everyone and applying relevant accessibility standards.

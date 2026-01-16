@@ -1,0 +1,15 @@
+title: Hephzibah King's Mother
+description: Business Services, Advocacy, Coaching, Consulting & Fingerprinting
+baseurl: ""
+url: "https://asputnik7network.github.io/hephzibahkingsmother"
+
+# Build settings
+markdown: kramdown
+theme: minima
+
+# Exclude from processing
+exclude:
+  - README.md
+  - .github/
+  - Gemfile
+  - Gemfile.lock
