@@ -1,1 +1,51 @@
+name: Accessibility & Launch Readiness Check
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 14 * * 1" # Mondays 10:00 AM ET (14:00 UTC)
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Verify core site files
+        shell: bash
+        run: |
+          set -u
+          echo "Running readiness checks..."
+
+          # Files expected at repo root (adjust only if you intentionally renamed them)
+          files=(
+            "index.html"
+            "README.md"
+            "SECURITY.md"
+            "accessibility.md"
+          )
+
+          for f in "${files[@]}"; do
+            if [[ ! -f "$f" ]]; then
+              echo "::warning title=Missing file::$f"
+            else
+              echo "OK: $f"
+            fi
+          done
+
+          # Folders you may or may not have yet (warnings only)
+          dirs=("text" "dashboard" "reports" "series")
+          for d in "${dirs[@]}"; do
+            if [[ ! -e "$d" ]]; then
+              echo "::warning title=Missing path::$d"
+            else
+              echo "OK: $d"
+            fi
+          done
+
+          echo "Readiness check completed."
 
