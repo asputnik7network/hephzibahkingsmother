@@ -1,0 +1,29 @@
+# Jekyll Configuration
+name: Hephzibah King's Mother
+title: Hephzibah King's Mother – Business Services & Fingerprinting
+description: Professional business services, advocacy, coaching, consulting and fingerprint data collection for Florida Level 2 background screening.
+url: https://asputnik7network.github.io
+baseurl: /hephzibahkingsmother
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+# Collections
+collections:
+  pages:
+    output: true
+    permalink: /:path/
+
+# Exclude from processing
+exclude:
+  - README.md
+  - SECURITY.md
+  - .github/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
