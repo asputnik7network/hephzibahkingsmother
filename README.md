@@ -18,3 +18,7 @@ Business Services, Fingerprints of God (Service Provider. Advocating. AI Coachin
 │
 ├── _config.yml             (if using Jekyll)
 └── README.md
+
+## Contact
+
+Email: asputnik7network@gmail.com
