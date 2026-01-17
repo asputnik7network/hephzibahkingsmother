@@ -172,6 +172,10 @@ nav a:hover {
   background: var(--secondary-color);
 }
 
+.btn-secondary {
+  margin-left: 10px;
+}
+
 /* Services */
 .services-section {
   padding: 4rem 0;

@@ -77,7 +77,7 @@ Phone: (239) 888-9878
 Lehigh Acres, FL
 
 **Scheduling:**  
-[Schedule an appointment](http://calendly.com/DOESS)
+[Schedule an appointment](https://calendly.com/DOESS)
 
 **Website:**  
 Visit our homepage for detailed service information
