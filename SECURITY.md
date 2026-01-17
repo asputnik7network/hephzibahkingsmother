@@ -14,8 +14,13 @@ currently being supported with security updates.
 
 ## Reporting a Vulnerability
 
-Use this section to tell people how to report a vulnerability.
+If you discover a security vulnerability, please report it to us via email at:
 
-Tell them where to go, how often they can expect to get an update on a
-reported vulnerability, what to expect if the vulnerability is accepted or
-declined, etc.
+**Email:** asputnik7network@gmail.com
+
+We take all security reports seriously and will respond as quickly as possible. Please include:
+- A description of the vulnerability
+- Steps to reproduce the issue
+- Potential impact
+
+We will acknowledge receipt of your vulnerability report within 48 hours and provide regular updates on our progress. If the vulnerability is accepted, we will work on a fix and coordinate disclosure with you.
