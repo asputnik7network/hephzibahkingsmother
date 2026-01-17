@@ -16,18 +16,39 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: Verify core site files
+      - name: Verify accessibility documentation
         shell: bash
         run: |
           set -u
-          echo "Running readiness checks..."
+          echo "Running accessibility checks..."
 
-          # Files expected at repo root (adjust only if you intentionally renamed them)
+          # Check for accessibility documentation
+          if [[ ! -f "accessibility.md" ]]; then
+            echo "::error title=Missing file::accessibility.md"
+            exit 1
+          else
+            echo "OK: accessibility.md"
+          fi
+
+          echo "Accessibility check completed."
+
+  Launch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Verify launch readiness
+        shell: bash
+        run: |
+          set -u
+          echo "Running launch readiness checks..."
+
+          # Files expected at repo root for launch
           files=(
             "index.html"
             "README.md"
             "SECURITY.md"
-            "accessibility.md"
           )
 
           for f in "${files[@]}"; do
@@ -48,5 +69,5 @@ jobs:
             fi
           done
 
-          echo "Readiness check completed."
+          echo "Launch readiness check completed."
 
