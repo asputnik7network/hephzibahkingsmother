@@ -32,7 +32,7 @@ jobs:
 
           echo "Accessibility check completed."
 
-  Launch:
+  Readiness:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
