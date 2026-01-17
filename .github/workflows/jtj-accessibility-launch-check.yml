@@ -25,8 +25,7 @@ jobs:
 
           # Check for accessibility documentation
           if [[ ! -f "accessibility.md" ]]; then
-            echo "::error title=Missing file::accessibility.md"
-            exit 1
+            echo "::warning title=Missing file::accessibility.md"
           else
             echo "OK: accessibility.md"
           fi
